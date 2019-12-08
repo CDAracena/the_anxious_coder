@@ -1,32 +1,27 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import brandColors from '../utils/commonstyles.js'
 
 const Header = ({ siteTitle }) => (
   <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
+    style={styles.headerContainer}
   >
     <div
       style={{
         margin: `0 auto`,
         maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
+        padding: 20,
       }}
     >
-      <h1 style={{ margin: 0 }}>
+  
         <Link
           to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
+          style={styles.headerTitle}
         >
           {siteTitle}
         </Link>
-      </h1>
+      
     </div>
   </header>
 )
@@ -40,3 +35,16 @@ Header.defaultProps = {
 }
 
 export default Header
+
+const styles = {
+  headerContainer: {
+    background: brandColors.black,
+      marginBottom: `1.45rem`,
+  },
+  headerTitle: {
+    color: brandColors.white,
+    textDecoration: `none`,
+    fontSize: 28,
+    fontWeight: 800
+  }
+}
