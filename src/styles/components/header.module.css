@@ -1,0 +1,13 @@
+.headerlink {
+  transition: transform 0.4s ease-in-out;
+  color: #2c2929fc;
+  text-decoration: none;
+}
+
+.headerlink:active {
+  transform: scale(1.1);
+}
+
+.headerlink:hover {
+  color: #fff;
+}
